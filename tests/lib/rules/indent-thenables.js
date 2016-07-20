@@ -24,32 +24,34 @@ ruleTester.run("indent-thenables", rule, {
       {code: "foo()\n  .then(console.log)"},
       {code: "foo().bar(console.log)"},
       {code: "  foo()\n    .then(console.log)"},
+      {code: "p.then(console.log)"},
+      {code: "p().then(console.log)"},
     ],
 
     invalid: [
         {
-          code: "foo().then(console.log)",
-          errors: [{
-            message: ".then() must be on new line",
-            type: "Identifier"
-          }]
-        },
-        {
-          code: "foo().catch(console.log)",
-          errors: [{
-            message: ".catch() must be on new line",
-            type: "Identifier"
-          }]
-        },
-        {
-          code: "foo().finally(console.log)",
-          errors: [{
-            message: ".finally() must be on new line",
-            type: "Identifier"
-          }]
-        },
-        {
           code: "foo()\n.then(console.log)",
+          errors: [{
+            message: ".then() must be indented",
+            type: "Identifier"
+          }]
+        },
+        {
+          code: "foo()\n.catch(console.log)",
+          errors: [{
+            message: ".catch() must be indented",
+            type: "Identifier"
+          }]
+        },
+        {
+          code: "foo()\n.finally(console.log)",
+          errors: [{
+            message: ".finally() must be indented",
+            type: "Identifier"
+          }]
+        },
+        {
+          code: "  foo()\n  .then(console.log)",
           errors: [{
             message: ".then() must be indented",
             type: "Identifier"
