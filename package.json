@@ -1,0 +1,37 @@
+{
+  "name": "eslint-plugin-rocket-skates",
+  "version": "0.0.0",
+  "description": "Extra lint rules for rocket-skates",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": {
+    "name": "Joe Hildebrand",
+    "email": "joe-github@cursive.net"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "homepage": "https://github.com/hildjj/eslint-plugin-rocket-skates",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hildjj/eslint-plugin-rocket-skates"
+  },
+  "bugs": {
+    "url": "https://github.com/hildjj/eslint-plugin-rocket-skates/issues"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "~2.6.0",
+    "mocha": "^2.5.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "MPL-2.0"
+}
