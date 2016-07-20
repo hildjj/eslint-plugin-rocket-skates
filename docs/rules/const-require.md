@@ -1,7 +1,6 @@
 # Ensure requires go into a const (const-require)
 
-Please describe the origin of the rule here.
-
+Modifying required modules is rarely going to be a good idea.
 
 ## Rule Details
 
