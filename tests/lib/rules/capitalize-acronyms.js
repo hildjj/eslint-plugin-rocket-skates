@@ -23,6 +23,9 @@ ruleTester.run("capitalize-acronyms", rule, {
     valid: [
         { code: "var http;", options: [['HTTP']] },
         { code: "var HTTPFoo;", options: [['HTTP', 'BAR']] },
+        { code: "var HTTP01Challenge;", options: [['HTTP']] },
+        { code: "var some1HTTP;", options: [['HTTP']] },
+        { code: "var some1HTTP01Challenge;", options: [['HTTP']] },
         { code: "var h = { http: 1, HTTPFoo: 2}", options: [['HTTP', 'JS']] },
     ],
 
