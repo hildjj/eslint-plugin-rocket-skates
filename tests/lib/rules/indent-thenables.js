@@ -31,35 +31,35 @@ ruleTester.run("indent-thenables", rule, {
           code: "foo().then(console.log)",
           errors: [{
             message: ".then() must be on new line",
-            type: "MemberExpression"
+            type: "Identifier"
           }]
         },
         {
           code: "foo().catch(console.log)",
           errors: [{
             message: ".catch() must be on new line",
-            type: "MemberExpression"
+            type: "Identifier"
           }]
         },
         {
           code: "foo().finally(console.log)",
           errors: [{
             message: ".finally() must be on new line",
-            type: "MemberExpression"
+            type: "Identifier"
           }]
         },
         {
           code: "foo()\n.then(console.log)",
           errors: [{
             message: ".then() must be indented",
-            type: "MemberExpression"
+            type: "Identifier"
           }]
         },
         {
           code: "  foo()\n.then(console.log)",
           errors: [{
             message: ".then() must be indented",
-            type: "MemberExpression"
+            type: "Identifier"
           }]
         },
     ]
