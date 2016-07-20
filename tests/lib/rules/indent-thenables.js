@@ -21,11 +21,11 @@ var ruleTester = new RuleTester();
 ruleTester.run("indent-thenables", rule, {
 
     valid: [
-      {code: "foo()\n  .then(console.log)"},
-      {code: "foo().bar(console.log)"},
-      {code: "  foo()\n    .then(console.log)"},
-      {code: "p.then(console.log)"},
-      {code: "p().then(console.log)"},
+      "foo()\n  .then(console.log)",
+      "foo().bar(console.log)",
+      "  foo()\n    .then(console.log)",
+      "p.then(console.log)",
+      "p().then(console.log)",
     ],
 
     invalid: [
